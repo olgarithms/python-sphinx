@@ -11,6 +11,10 @@ Welcome to Sphinxy's documentation!
    :caption: Contents:
 
 
+Meet Sphinx
+-----------
+.. image:: _static/sphinx.jpg
+
 
 Indices and tables
 ==================

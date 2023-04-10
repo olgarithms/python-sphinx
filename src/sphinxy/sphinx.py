@@ -29,7 +29,9 @@ class Sphinx:
     def pose_riddle(self, include_hint: bool = False) -> tuple[str, str]:
         hint = ""
         if include_hint:
-            hint = f"Hint: The answer starts with the letter '{self._riddle.get_hint()}'."
+            hint = (
+                f"Hint: The answer starts with the letter '{self._riddle.get_hint()}'."
+            )
         return (self._riddle.question, hint)
 
     def check_riddle_answer(self, answer: str, return_hint: bool = False) -> str:
