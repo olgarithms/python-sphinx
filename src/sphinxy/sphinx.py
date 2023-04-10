@@ -26,10 +26,12 @@ class Sphinx:
         self._riddle = riddle
         return "I have updated my riddle. Are you ready to solve it?"
 
-    def pose_riddle(self, include_hint: bool = False) -> tuple[str, str]:
-        hint = ""
-        if include_hint:
-            hint = f"Hint: The answer starts with the letter '{self._riddle.get_hint()}'."
+    def pose_riddle(self, include_hint: bool = False) -> tuple[str, str | None]:
+        hint = (
+            f"Hint: The answer starts with the letter '{self._riddle.get_hint()}'."
+            if include_hint
+            else None
+        )
         return (self._riddle.question, hint)
 
     def check_riddle_answer(self, answer: str, return_hint: bool = False) -> str:
