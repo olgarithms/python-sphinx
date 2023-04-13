@@ -1,27 +1,22 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "sphinxy"
 description = "Examples for sphinx-tutorial"
-dynamic = ["version"]
+version = "0.0.1"
 requires-python = ">=3.8"
-license = "MIT"
+license = {file = "LICENSE"}
 authors = [
   { name = "Aya Elsayed", email = "ayah.ehab11@gmail.com" },
   { name = "Olga Matoula", email = "olgamatoula@gmail.com" },
 ]
 dependencies = []
 
-[tool.hatch.version]
-path = "src/sphinxy/__about__.py"
+[project.optional-dependencies]
+dev = ["pytest"]
 
-[tool.hatch.build.targets.sdist]
-exclude = [
-  "/.github",
-  "/docs",
-]
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/sphinxy"]
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sphinxy*"]

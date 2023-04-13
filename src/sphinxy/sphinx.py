@@ -68,8 +68,8 @@ class Sphinx:
 
         Args:
             answer (str): The given answer to the riddle.
-            return_hint (bool, optional): Controls whether a hint for the riddle should be returned.
-                Defaults to False.
+            return_hint (bool, optional): Controls whether a hint for the riddle should
+                be returned. Defaults to False.
 
         Raises:
             IncorrectAnswer: Exception for incorrect answer.
@@ -86,15 +86,3 @@ class Sphinx:
             )
         else:
             raise IncorrectAnswer("Your answer was wrong. You shall not pass.")
-
-    @staticmethod
-    def sleep(duration: int = 5) -> str:
-        """Puts the Sphinx to sleep for requested duration.
-
-        Args:
-            duration (int, optional): Sleep duration in years. Defaults to 5.
-
-        Returns:
-            str: A confirmation that the Sphinx will sleep for the requested period.
-        """
-        return f"I am tired of waiting. I will sleep for {duration} years."

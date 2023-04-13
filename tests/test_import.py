@@ -1,2 +1,4 @@
 def test_import() -> None:
-    import sphinxy
+    from sphinxy.sphinx import Sphinx
+
+    assert Sphinx("Sphinxy")
