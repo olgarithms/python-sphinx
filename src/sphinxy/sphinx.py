@@ -44,7 +44,3 @@ class Sphinx:
             )
         else:
             raise IncorrectAnswer("Your answer was wrong. You shall not pass.")
-
-    @staticmethod
-    def sleep(duration: int = 5) -> str:
-        return f"I am tired of waiting. I will sleep for {duration} years."
